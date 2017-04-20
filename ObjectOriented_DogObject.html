@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+    function callbyValueOrReference(mydog, myint){
+        mydog.name="Foodie";
+        myint=5;
+    }
+    var dog={
+        name:"Fido",
+        weight: 20.2,
+        age: 4,
+        breed:"mixed",
+        activity:"fetch balls"
+    };
+    var bark;
+    if(dog.weight>20){
+        bark="WOOF WOOF";
+    }
+    else {
+        bark="woof woof";
+    }
+    
+    var speak= dog.name + " says "+ bark + " when he wants to "+dog.activity;
+    console.log(speak);
+    console.log("Object before calling function ");
+    console.log(dog);
+    var myinteger=20;
+    console.log("Integer before calling function "+myinteger);
+    callbyValueOrReference(dog,myinteger);
+    console.log("Object after calling function ");
+    console.log(dog);
+    console.log("Integer after calling function "+myinteger);
+    </script>
+
+</head>
+<body>
+</body>
+</html>
